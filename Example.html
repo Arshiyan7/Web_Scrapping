@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Journey</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #ffcc00;
+            transition: color 0.5s ease-in-out;
+        }
+
+        h1:hover {
+            color: #ff5733;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+            opacity: 0;
+            animation: fadeInText 2s ease-out forwards;
+        }
+
+        .motivation {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff5733;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeInText 2.5s ease-out forwards;
+        }
+
+        .typing {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffcc00;
+            display: inline-block;
+            white-space: nowrap;
+            border-right: 3px solid #ffcc00;
+            width: 0;
+            overflow: hidden;
+            animation: typing 3s steps(40, end) forwards, blink 1s infinite;
+        }
+
+        @keyframes typing {
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .glow {
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #ff5733, 0 0 10px #ff5733, 0 0 15px #ffcc00;
+            }
+            to {
+                text-shadow: 0 0 10px #ffcc00, 0 0 15px #ffcc00, 0 0 20px #ffffff;
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>So, You're Back Again... After All This Time</h1>
+        <p>Life is a crazy journey, isn't it?</p>
+        <p>Remember the struggles, the sleepless nights, the doubts? You're still standing.</p>
+        <p>Did you finally become the person you once dreamed of?</p>
+        <p>Have you conquered the fears that once held you back?</p>
+        <p>Are you proud of the progress you've made?</p>
+        <p>If not, then keep going! If yes, then never stop.</p>
+        
+        <p class="typing" id="dynamicText"></p>
+
+        <h1 class="glow">NO MATTER WHAT HAPPENS... YOU GOT THIS! 💪</h1>
+    </div>
+
+    <script>
+        const text = "Keep pushing. Keep evolving. The world hasn't seen your full potential yet.";
+        let index = 0;
+        const dynamicText = document.getElementById("dynamicText");
+
+        function typeText() {
+            if (index < text.length) {
+                dynamicText.innerHTML += text[index];
+                index++;
+                setTimeout(typeText, 50);
+            }
+        }
+
+        setTimeout(typeText, 1500); 
+    </script>
+
+</body>
+</html>
