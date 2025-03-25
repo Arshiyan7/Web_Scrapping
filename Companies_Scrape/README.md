@@ -1,4 +1,4 @@
-# 🇺🇸 Largest US Companies by Revenue 💰
+# US Largest US Companies by Revenue 💰
 
 ## Project Overview
 
