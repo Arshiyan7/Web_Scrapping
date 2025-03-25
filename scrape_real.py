@@ -24,4 +24,4 @@ df = pd.DataFrame(book_data, columns=["Title", "Price", "Availability"])  # Conv
 filename = "books_data.xlsx"
 df.to_excel(filename, index=False, engine="openpyxl")  # Save as Excel
 
-print(f"✅ Data scraped and saved to {filename} successfully!")
+print(f"Data scraped and saved to {filename} successfully!")
