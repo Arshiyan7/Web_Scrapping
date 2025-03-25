@@ -45,4 +45,3 @@ This project aims to scrape the "List of largest companies in the United States 
 
     The scraped data will be saved in the `/data` directory as `largest_us_companies.csv`.
 
-## 📁 File Structure
